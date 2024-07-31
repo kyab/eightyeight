@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct ContentView: View {
     @EnvironmentObject var appClipManager: AppClipManager
@@ -70,6 +71,12 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
+            
+            
+            SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
+                .signInWithAppleButtonStyle(.black)
+                .frame(width: 280, height: 45)
+            
         }
         .padding()
         
@@ -78,6 +85,32 @@ struct ContentView: View {
     func openLocationMindWeb(){
         if let url = URL(string: "https://locationmind.com/") {
             UIApplication.shared.open(url)
+        }
+    }
+    
+    private func configure(_ request: ASAuthorizationAppleIDRequest){
+        debugPrint("SignIn with Apple : configure() called")
+        request.requestedScopes = [.email]
+    }
+    
+    private func handle(_ result: Result<ASAuthorization, Error>) {
+        switch result {
+        case .success(let auth):
+            debugPrint("SignIn with Apple : handle() called with succsess")
+            if let credential = auth.credential as? ASAuthorizationAppleIDCredential {
+                let userIdentifier = credential.user
+                let email = credential.email
+                let identityToken = credential.identityToken
+                
+                debugPrint("SignIn with Apple : userIdentifier = \(userIdentifier)")
+                debugPrint("SignIn with Apple : email = \(email ?? "nil")")
+                debugPrint("SignIn with Apple : identityToken = \(String(data: identityToken!, encoding: .utf8) ?? "nil")")
+                
+            }else{
+                debugPrint("SignIn with Apple : handle() called with no credential")
+            }
+        case .failure(let error):
+            debugPrint("SignIn with Apple : handle() called with failure : \(error.localizedDescription)")
         }
     }
 }
