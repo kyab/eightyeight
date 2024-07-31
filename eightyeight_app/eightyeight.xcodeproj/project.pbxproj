@@ -1,0 +1,1031 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C24A58E2C4F991600462406 /* eightyeightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A58D2C4F991600462406 /* eightyeightApp.swift */; };
+		0C24A5902C4F991600462406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A58F2C4F991600462406 /* ContentView.swift */; };
+		0C24A5922C4F991700462406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C24A5912C4F991700462406 /* Assets.xcassets */; };
+		0C24A5952C4F991700462406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C24A5942C4F991700462406 /* Preview Assets.xcassets */; };
+		0C24A59F2C4F991700462406 /* eightyeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A59E2C4F991700462406 /* eightyeightTests.swift */; };
+		0C24A5A92C4F991700462406 /* eightyeightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5A82C4F991700462406 /* eightyeightUITests.swift */; };
+		0C24A5AB2C4F991700462406 /* eightyeightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5AA2C4F991700462406 /* eightyeightUITestsLaunchTests.swift */; };
+		0C24A5BE2C4F99AA00462406 /* eightyeight_appclipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5BD2C4F99AA00462406 /* eightyeight_appclipApp.swift */; };
+		0C24A5C02C4F99AA00462406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5BF2C4F99AA00462406 /* ContentView.swift */; };
+		0C24A5C22C4F99AA00462406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C24A5C12C4F99AA00462406 /* Assets.xcassets */; };
+		0C24A5C52C4F99AA00462406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C24A5C42C4F99AA00462406 /* Preview Assets.xcassets */; };
+		0C24A5D12C4F99AB00462406 /* eightyeight_appclipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5D02C4F99AB00462406 /* eightyeight_appclipTests.swift */; };
+		0C24A5DB2C4F99AB00462406 /* eightyeight_appclipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5DA2C4F99AB00462406 /* eightyeight_appclipUITests.swift */; };
+		0C24A5DD2C4F99AB00462406 /* eightyeight_appclipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24A5DC2C4F99AB00462406 /* eightyeight_appclipUITestsLaunchTests.swift */; };
+		0C24A5E02C4F99AB00462406 /* eightyeight-appclip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0C24A5BB2C4F99AA00462406 /* eightyeight-appclip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C969C6C2C59190E0061B1C7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C969C6B2C59190D0061B1C7 /* LocationManager.swift */; };
+		0CA094942C564E0D00AE7D1B /* AppClipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA094932C564E0D00AE7D1B /* AppClipManager.swift */; };
+		0CA094962C56547C00AE7D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA094952C56547C00AE7D1B /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C24A59B2C4F991700462406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C24A5822C4F991600462406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C24A5892C4F991600462406;
+			remoteInfo = eightyeight;
+		};
+		0C24A5A52C4F991700462406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C24A5822C4F991600462406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C24A5892C4F991600462406;
+			remoteInfo = eightyeight;
+		};
+		0C24A5CD2C4F99AB00462406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C24A5822C4F991600462406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C24A5BA2C4F99AA00462406;
+			remoteInfo = "eightyeight-appclip";
+		};
+		0C24A5D72C4F99AB00462406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C24A5822C4F991600462406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C24A5BA2C4F99AA00462406;
+			remoteInfo = "eightyeight-appclip";
+		};
+		0C24A5DE2C4F99AB00462406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C24A5822C4F991600462406 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C24A5BA2C4F99AA00462406;
+			remoteInfo = "eightyeight-appclip";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C24A5E42C4F99AB00462406 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				0C24A5E02C4F99AB00462406 /* eightyeight-appclip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0C24A58A2C4F991600462406 /* eightyeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eightyeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C24A58D2C4F991600462406 /* eightyeightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeightApp.swift; sourceTree = "<group>"; };
+		0C24A58F2C4F991600462406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C24A5912C4F991700462406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C24A5942C4F991700462406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C24A59A2C4F991700462406 /* eightyeightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eightyeightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C24A59E2C4F991700462406 /* eightyeightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeightTests.swift; sourceTree = "<group>"; };
+		0C24A5A42C4F991700462406 /* eightyeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eightyeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C24A5A82C4F991700462406 /* eightyeightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeightUITests.swift; sourceTree = "<group>"; };
+		0C24A5AA2C4F991700462406 /* eightyeightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C24A5BB2C4F99AA00462406 /* eightyeight-appclip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eightyeight-appclip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C24A5BD2C4F99AA00462406 /* eightyeight_appclipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeight_appclipApp.swift; sourceTree = "<group>"; };
+		0C24A5BF2C4F99AA00462406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C24A5C12C4F99AA00462406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C24A5C42C4F99AA00462406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C24A5C62C4F99AA00462406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C24A5C72C4F99AA00462406 /* eightyeight_appclip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eightyeight_appclip.entitlements; sourceTree = "<group>"; };
+		0C24A5CC2C4F99AB00462406 /* eightyeight-appclipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eightyeight-appclipTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C24A5D02C4F99AB00462406 /* eightyeight_appclipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeight_appclipTests.swift; sourceTree = "<group>"; };
+		0C24A5D62C4F99AB00462406 /* eightyeight-appclipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eightyeight-appclipUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C24A5DA2C4F99AB00462406 /* eightyeight_appclipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeight_appclipUITests.swift; sourceTree = "<group>"; };
+		0C24A5DC2C4F99AB00462406 /* eightyeight_appclipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eightyeight_appclipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C24A5EB2C4FBCC400462406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0C24A5EC2C4FC03E00462406 /* eightyeight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eightyeight.entitlements; sourceTree = "<group>"; };
+		0C969C6B2C59190D0061B1C7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0CA094932C564E0D00AE7D1B /* AppClipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipManager.swift; sourceTree = "<group>"; };
+		0CA094952C56547C00AE7D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C24A5872C4F991600462406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5972C4F991700462406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5A12C4F991700462406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5B82C4F99AA00462406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5C92C4F99AB00462406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5D32C4F99AB00462406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C24A5812C4F991600462406 = {
+			isa = PBXGroup;
+			children = (
+				0C24A58C2C4F991600462406 /* eightyeight */,
+				0C24A59D2C4F991700462406 /* eightyeightTests */,
+				0C24A5A72C4F991700462406 /* eightyeightUITests */,
+				0C24A5BC2C4F99AA00462406 /* eightyeight-appclip */,
+				0C24A5CF2C4F99AB00462406 /* eightyeight-appclipTests */,
+				0C24A5D92C4F99AB00462406 /* eightyeight-appclipUITests */,
+				0C24A58B2C4F991600462406 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C24A58B2C4F991600462406 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A58A2C4F991600462406 /* eightyeight.app */,
+				0C24A59A2C4F991700462406 /* eightyeightTests.xctest */,
+				0C24A5A42C4F991700462406 /* eightyeightUITests.xctest */,
+				0C24A5BB2C4F99AA00462406 /* eightyeight-appclip.app */,
+				0C24A5CC2C4F99AB00462406 /* eightyeight-appclipTests.xctest */,
+				0C24A5D62C4F99AB00462406 /* eightyeight-appclipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C24A58C2C4F991600462406 /* eightyeight */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5EC2C4FC03E00462406 /* eightyeight.entitlements */,
+				0C24A5EB2C4FBCC400462406 /* Info.plist */,
+				0C24A58D2C4F991600462406 /* eightyeightApp.swift */,
+				0C24A58F2C4F991600462406 /* ContentView.swift */,
+				0C24A5912C4F991700462406 /* Assets.xcassets */,
+				0C24A5932C4F991700462406 /* Preview Content */,
+			);
+			path = eightyeight;
+			sourceTree = "<group>";
+		};
+		0C24A5932C4F991700462406 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5942C4F991700462406 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0C24A59D2C4F991700462406 /* eightyeightTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A59E2C4F991700462406 /* eightyeightTests.swift */,
+			);
+			path = eightyeightTests;
+			sourceTree = "<group>";
+		};
+		0C24A5A72C4F991700462406 /* eightyeightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5A82C4F991700462406 /* eightyeightUITests.swift */,
+				0C24A5AA2C4F991700462406 /* eightyeightUITestsLaunchTests.swift */,
+			);
+			path = eightyeightUITests;
+			sourceTree = "<group>";
+		};
+		0C24A5BC2C4F99AA00462406 /* eightyeight-appclip */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5BD2C4F99AA00462406 /* eightyeight_appclipApp.swift */,
+				0C24A5BF2C4F99AA00462406 /* ContentView.swift */,
+				0CA094932C564E0D00AE7D1B /* AppClipManager.swift */,
+				0C969C6B2C59190D0061B1C7 /* LocationManager.swift */,
+				0C24A5C12C4F99AA00462406 /* Assets.xcassets */,
+				0C24A5C62C4F99AA00462406 /* Info.plist */,
+				0C24A5C72C4F99AA00462406 /* eightyeight_appclip.entitlements */,
+				0C24A5C32C4F99AA00462406 /* Preview Content */,
+				0CA094952C56547C00AE7D1B /* AppDelegate.swift */,
+			);
+			path = "eightyeight-appclip";
+			sourceTree = "<group>";
+		};
+		0C24A5C32C4F99AA00462406 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5C42C4F99AA00462406 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0C24A5CF2C4F99AB00462406 /* eightyeight-appclipTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5D02C4F99AB00462406 /* eightyeight_appclipTests.swift */,
+			);
+			path = "eightyeight-appclipTests";
+			sourceTree = "<group>";
+		};
+		0C24A5D92C4F99AB00462406 /* eightyeight-appclipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C24A5DA2C4F99AB00462406 /* eightyeight_appclipUITests.swift */,
+				0C24A5DC2C4F99AB00462406 /* eightyeight_appclipUITestsLaunchTests.swift */,
+			);
+			path = "eightyeight-appclipUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C24A5892C4F991600462406 /* eightyeight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C24A5AE2C4F991700462406 /* Build configuration list for PBXNativeTarget "eightyeight" */;
+			buildPhases = (
+				0C24A5862C4F991600462406 /* Sources */,
+				0C24A5872C4F991600462406 /* Frameworks */,
+				0C24A5882C4F991600462406 /* Resources */,
+				0C24A5E42C4F99AB00462406 /* Embed App Clips */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C24A5DF2C4F99AB00462406 /* PBXTargetDependency */,
+			);
+			name = eightyeight;
+			productName = eightyeight;
+			productReference = 0C24A58A2C4F991600462406 /* eightyeight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C24A5992C4F991700462406 /* eightyeightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C24A5B12C4F991700462406 /* Build configuration list for PBXNativeTarget "eightyeightTests" */;
+			buildPhases = (
+				0C24A5962C4F991700462406 /* Sources */,
+				0C24A5972C4F991700462406 /* Frameworks */,
+				0C24A5982C4F991700462406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C24A59C2C4F991700462406 /* PBXTargetDependency */,
+			);
+			name = eightyeightTests;
+			productName = eightyeightTests;
+			productReference = 0C24A59A2C4F991700462406 /* eightyeightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C24A5A32C4F991700462406 /* eightyeightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C24A5B42C4F991700462406 /* Build configuration list for PBXNativeTarget "eightyeightUITests" */;
+			buildPhases = (
+				0C24A5A02C4F991700462406 /* Sources */,
+				0C24A5A12C4F991700462406 /* Frameworks */,
+				0C24A5A22C4F991700462406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C24A5A62C4F991700462406 /* PBXTargetDependency */,
+			);
+			name = eightyeightUITests;
+			productName = eightyeightUITests;
+			productReference = 0C24A5A42C4F991700462406 /* eightyeightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		0C24A5BA2C4F99AA00462406 /* eightyeight-appclip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C24A5E12C4F99AB00462406 /* Build configuration list for PBXNativeTarget "eightyeight-appclip" */;
+			buildPhases = (
+				0C24A5B72C4F99AA00462406 /* Sources */,
+				0C24A5B82C4F99AA00462406 /* Frameworks */,
+				0C24A5B92C4F99AA00462406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "eightyeight-appclip";
+			productName = "eightyeight-appclip";
+			productReference = 0C24A5BB2C4F99AA00462406 /* eightyeight-appclip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		0C24A5CB2C4F99AB00462406 /* eightyeight-appclipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C24A5E52C4F99AB00462406 /* Build configuration list for PBXNativeTarget "eightyeight-appclipTests" */;
+			buildPhases = (
+				0C24A5C82C4F99AB00462406 /* Sources */,
+				0C24A5C92C4F99AB00462406 /* Frameworks */,
+				0C24A5CA2C4F99AB00462406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C24A5CE2C4F99AB00462406 /* PBXTargetDependency */,
+			);
+			name = "eightyeight-appclipTests";
+			productName = "eightyeight-appclipTests";
+			productReference = 0C24A5CC2C4F99AB00462406 /* eightyeight-appclipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C24A5D52C4F99AB00462406 /* eightyeight-appclipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C24A5E82C4F99AB00462406 /* Build configuration list for PBXNativeTarget "eightyeight-appclipUITests" */;
+			buildPhases = (
+				0C24A5D22C4F99AB00462406 /* Sources */,
+				0C24A5D32C4F99AB00462406 /* Frameworks */,
+				0C24A5D42C4F99AB00462406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C24A5D82C4F99AB00462406 /* PBXTargetDependency */,
+			);
+			name = "eightyeight-appclipUITests";
+			productName = "eightyeight-appclipUITests";
+			productReference = 0C24A5D62C4F99AB00462406 /* eightyeight-appclipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C24A5822C4F991600462406 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					0C24A5892C4F991600462406 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					0C24A5992C4F991700462406 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0C24A5892C4F991600462406;
+					};
+					0C24A5A32C4F991700462406 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0C24A5892C4F991600462406;
+					};
+					0C24A5BA2C4F99AA00462406 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					0C24A5CB2C4F99AB00462406 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0C24A5BA2C4F99AA00462406;
+					};
+					0C24A5D52C4F99AB00462406 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0C24A5BA2C4F99AA00462406;
+					};
+				};
+			};
+			buildConfigurationList = 0C24A5852C4F991600462406 /* Build configuration list for PBXProject "eightyeight" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C24A5812C4F991600462406;
+			productRefGroup = 0C24A58B2C4F991600462406 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C24A5892C4F991600462406 /* eightyeight */,
+				0C24A5992C4F991700462406 /* eightyeightTests */,
+				0C24A5A32C4F991700462406 /* eightyeightUITests */,
+				0C24A5BA2C4F99AA00462406 /* eightyeight-appclip */,
+				0C24A5CB2C4F99AB00462406 /* eightyeight-appclipTests */,
+				0C24A5D52C4F99AB00462406 /* eightyeight-appclipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C24A5882C4F991600462406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A5952C4F991700462406 /* Preview Assets.xcassets in Resources */,
+				0C24A5922C4F991700462406 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5982C4F991700462406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5A22C4F991700462406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5B92C4F99AA00462406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A5C52C4F99AA00462406 /* Preview Assets.xcassets in Resources */,
+				0C24A5C22C4F99AA00462406 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5CA2C4F99AB00462406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5D42C4F99AB00462406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C24A5862C4F991600462406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A5902C4F991600462406 /* ContentView.swift in Sources */,
+				0C24A58E2C4F991600462406 /* eightyeightApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5962C4F991700462406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A59F2C4F991700462406 /* eightyeightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5A02C4F991700462406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A5AB2C4F991700462406 /* eightyeightUITestsLaunchTests.swift in Sources */,
+				0C24A5A92C4F991700462406 /* eightyeightUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5B72C4F99AA00462406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CA094962C56547C00AE7D1B /* AppDelegate.swift in Sources */,
+				0C24A5C02C4F99AA00462406 /* ContentView.swift in Sources */,
+				0C969C6C2C59190E0061B1C7 /* LocationManager.swift in Sources */,
+				0CA094942C564E0D00AE7D1B /* AppClipManager.swift in Sources */,
+				0C24A5BE2C4F99AA00462406 /* eightyeight_appclipApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5C82C4F99AB00462406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A5D12C4F99AB00462406 /* eightyeight_appclipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C24A5D22C4F99AB00462406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C24A5DD2C4F99AB00462406 /* eightyeight_appclipUITestsLaunchTests.swift in Sources */,
+				0C24A5DB2C4F99AB00462406 /* eightyeight_appclipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C24A59C2C4F991700462406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C24A5892C4F991600462406 /* eightyeight */;
+			targetProxy = 0C24A59B2C4F991700462406 /* PBXContainerItemProxy */;
+		};
+		0C24A5A62C4F991700462406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C24A5892C4F991600462406 /* eightyeight */;
+			targetProxy = 0C24A5A52C4F991700462406 /* PBXContainerItemProxy */;
+		};
+		0C24A5CE2C4F99AB00462406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C24A5BA2C4F99AA00462406 /* eightyeight-appclip */;
+			targetProxy = 0C24A5CD2C4F99AB00462406 /* PBXContainerItemProxy */;
+		};
+		0C24A5D82C4F99AB00462406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C24A5BA2C4F99AA00462406 /* eightyeight-appclip */;
+			targetProxy = 0C24A5D72C4F99AB00462406 /* PBXContainerItemProxy */;
+		};
+		0C24A5DF2C4F99AB00462406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C24A5BA2C4F99AA00462406 /* eightyeight-appclip */;
+			targetProxy = 0C24A5DE2C4F99AB00462406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C24A5AC2C4F991700462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C24A5AD2C4F991700462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C24A5AF2C4F991700462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eightyeight/eightyeight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"eightyeight/Preview Content\"";
+				DEVELOPMENT_TEAM = A386R5WFZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eightyeight/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C24A5B02C4F991700462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eightyeight/eightyeight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"eightyeight/Preview Content\"";
+				DEVELOPMENT_TEAM = A386R5WFZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eightyeight/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0C24A5B22C4F991700462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eightyeight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eightyeight";
+			};
+			name = Debug;
+		};
+		0C24A5B32C4F991700462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eightyeight.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eightyeight";
+			};
+			name = Release;
+		};
+		0C24A5B52C4F991700462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = eightyeight;
+			};
+			name = Debug;
+		};
+		0C24A5B62C4F991700462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = eightyeight;
+			};
+			name = Release;
+		};
+		0C24A5E22C4F99AB00462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "eightyeight-appclip/eightyeight_appclip.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"eightyeight-appclip/Preview Content\"";
+				DEVELOPMENT_TEAM = A386R5WFZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "eightyeight-appclip/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = eightyeight;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeight.AppClip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C24A5E32C4F99AB00462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "eightyeight-appclip/eightyeight_appclip.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"eightyeight-appclip/Preview Content\"";
+				DEVELOPMENT_TEAM = A386R5WFZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "eightyeight-appclip/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = eightyeight;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyab.eightyeight.AppClip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0C24A5E62C4F99AB00462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyab.eightyeight.eightyeight-appclipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eightyeight-appclip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eightyeight-appclip";
+			};
+			name = Debug;
+		};
+		0C24A5E72C4F99AB00462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyab.eightyeight.eightyeight-appclipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eightyeight-appclip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eightyeight-appclip";
+			};
+			name = Release;
+		};
+		0C24A5E92C4F99AB00462406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyab.eightyeight.eightyeight-appclipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "eightyeight-appclip";
+			};
+			name = Debug;
+		};
+		0C24A5EA2C4F99AB00462406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyab.eightyeight.eightyeight-appclipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "eightyeight-appclip";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C24A5852C4F991600462406 /* Build configuration list for PBXProject "eightyeight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5AC2C4F991700462406 /* Debug */,
+				0C24A5AD2C4F991700462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C24A5AE2C4F991700462406 /* Build configuration list for PBXNativeTarget "eightyeight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5AF2C4F991700462406 /* Debug */,
+				0C24A5B02C4F991700462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C24A5B12C4F991700462406 /* Build configuration list for PBXNativeTarget "eightyeightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5B22C4F991700462406 /* Debug */,
+				0C24A5B32C4F991700462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C24A5B42C4F991700462406 /* Build configuration list for PBXNativeTarget "eightyeightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5B52C4F991700462406 /* Debug */,
+				0C24A5B62C4F991700462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C24A5E12C4F99AB00462406 /* Build configuration list for PBXNativeTarget "eightyeight-appclip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5E22C4F99AB00462406 /* Debug */,
+				0C24A5E32C4F99AB00462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C24A5E52C4F99AB00462406 /* Build configuration list for PBXNativeTarget "eightyeight-appclipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5E62C4F99AB00462406 /* Debug */,
+				0C24A5E72C4F99AB00462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C24A5E82C4F99AB00462406 /* Build configuration list for PBXNativeTarget "eightyeight-appclipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C24A5E92C4F99AB00462406 /* Debug */,
+				0C24A5EA2C4F99AB00462406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C24A5822C4F991600462406 /* Project object */;
+}
