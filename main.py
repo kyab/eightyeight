@@ -25,7 +25,12 @@ async def location(lon: float):
 async def appclip():
     return {"message" : "Hello AppClip"}
 
-
+def get_apple_public_keys():
+    response = requests.get(APPLE_SIGN_IN_PUBLIC_KEYS_URL)
+    if response.status_code != 200:
+        raise HTTPException(status_code=500, detail="Failed to fetch Apple public keys")
+    
+    return response.json()
 
 def verify_apple_token(identity_token : str):
 
@@ -54,7 +59,7 @@ def verify_apple_token(identity_token : str):
 
 
 @app.post("/api/stamp")
-async def api_endpoint(request: Request):
+async def api_stamp(request: Request):
     try:
         body = await request.json()
         print("request body json = ", body)
@@ -73,6 +78,7 @@ async def api_endpoint(request: Request):
             raise HTTPException(status_code=400, detail="Invalid userIdentifier")
         
         print("verified email in JWT token = ", verified_token['email'])
+        email = verified_token['email']
         print("aud = ", verified_token['aud'])
         print("sub = ", verified_token['sub'])
         print("exp = ", verified_token['exp'])
