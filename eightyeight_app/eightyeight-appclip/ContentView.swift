@@ -13,14 +13,22 @@ struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var message: String?
     
+    @State private var coordinator: Coordinator?
+    
+    @State private var userIdentifier: String?
+    @State private var email: String?
+    @State private var identityToken: Data?
+    
+    @State private var isStampingInProgress = false
+    @State private var lastStampResult: String?
+    
+    
     var body: some View {
         VStack {
             
-            if let clipContent = appClipManager.clipContent {
-                Text(clipContent)
-            } else {
-                Text("Welcome to MyAppClip")
-            }
+            Text("八十八")
+                .font(.largeTitle)
+                .padding()
             
             Text("----------")
                 .padding([.top], 20)
@@ -33,85 +41,169 @@ struct ContentView: View {
             } else {
                 Text("No location data")
             }
-            
-            
             Text("----------")
                 .padding([.bottom], 20)
-
-            Text("八十八")
-                .font(.largeTitle)
-                .padding()
             
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            
-            Button(action: openLocationMindWeb) {
-                Text("LocationMind")
-                    .font(.title3)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+            if userIdentifier != nil {
+                Text("Already Signed in with Apple")
+                if (locationManager.latitude != nil) &&  (locationManager.longtitude != nil) {
+                    if (isStampingInProgress){
+                        Text("Stamping in progress")
+                            .font(.title)
+                            .padding()
+                            .background(Color.gray)
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
+                    }else{
+                        Button(action: performStamp){
+                            Text("Stamp at here")
+                                .font(.title)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.black)
+                                .cornerRadius(10)
+                        }
+                    }
+                }else{
+                    Text("Location data is not available")
+                }
+            }else{
+                Button(action: performSignInWithApple){
+                    Text("SignIn/Stamp at here")
+                        .font(.title)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                }
             }
             
-            if let message = message {
-                Text(message)
-                    .font(.title)
-                    .padding([.top], 20)
+            if let lastStampResult = lastStampResult {
+                Text("Stamping : \(lastStampResult)")
             }
             
-            Button(action: {
-                message = "Hi AppClip"
-            }) {
-                Text("Tap me")
-                    .font(.title)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+            if let clipContent = appClipManager.clipContent {
+                Text(clipContent)
+            } else {
+                Text("no parameter")
             }
-            
-            
-            SignInWithAppleButton(.signIn, onRequest: configure, onCompletion: handle)
-                .signInWithAppleButtonStyle(.black)
-                .frame(width: 280, height: 45)
-            
         }
         .padding()
+        .onAppear(){
+            self.coordinator = makeCoordinator()
+        }
         
     }
     
-    func openLocationMindWeb(){
-        if let url = URL(string: "https://locationmind.com/") {
-            UIApplication.shared.open(url)
-        }
-    }
-    
-    private func configure(_ request: ASAuthorizationAppleIDRequest){
-        debugPrint("SignIn with Apple : configure() called")
-        request.requestedScopes = [.email]
-    }
-    
-    private func handle(_ result: Result<ASAuthorization, Error>) {
-        switch result {
-        case .success(let auth):
-            debugPrint("SignIn with Apple : handle() called with succsess")
-            if let credential = auth.credential as? ASAuthorizationAppleIDCredential {
-                let userIdentifier = credential.user
-                let email = credential.email
-                let identityToken = credential.identityToken
-                
-                debugPrint("SignIn with Apple : userIdentifier = \(userIdentifier)")
-                debugPrint("SignIn with Apple : email = \(email ?? "nil")")
-                debugPrint("SignIn with Apple : identityToken = \(String(data: identityToken!, encoding: .utf8) ?? "nil")")
-                
-            }else{
-                debugPrint("SignIn with Apple : handle() called with no credential")
+    private func performStamp(){
+        debugPrint("Stamping")
+        debugPrint("latitude = \(locationManager.latitude ?? 0)")
+        debugPrint("longtitude = \(locationManager.longtitude ?? 0)")
+        debugPrint("placeName = \(locationManager.placeName ?? "nil")")
+        debugPrint("userIdentifier = \(userIdentifier ?? "nil")")
+        
+        guard let identityToken = identityToken else { return }
+        let tokenString = String(data: identityToken, encoding: .utf8)
+        guard let tokenString = tokenString else { return }
+        
+        guard let userIdentifier = userIdentifier else { return }
+        guard let latitude = locationManager.latitude else { return }
+        guard let longtitude = locationManager.longtitude else { return }
+        
+        let url = URL(string: "https://eightyeight-kyab.com/api/stamp")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let body: [String: Any] = [
+            "userIdentifier": userIdentifier,
+            "identityToken" : tokenString,
+            "email" : email ?? "",
+            "latitude" : latitude,
+            "longtitude" : longtitude,
+            "placeName" : locationManager.placeName ?? ""
+        ]
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: body, options: [.prettyPrinted])
+            request.httpBody = jsonData
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    debugPrint("Error sending data to server: \(error)")
+                    lastStampResult = "Error"
+                }else{
+                    debugPrint("Data sent to server successfully")
+                    debugPrint("HTTP response status code is \(String(describing: (response as? HTTPURLResponse)?.statusCode ?? 0))")
+                    debugPrint("Response from server: \(String(data: data!, encoding: .utf8) ?? "nil")")
+                    lastStampResult = "Success"
+                }
+                isStampingInProgress = false
             }
-        case .failure(let error):
-            debugPrint("SignIn with Apple : handle() called with failure : \(error.localizedDescription)")
+            debugPrint("Sending data to server")
+            isStampingInProgress = true
+            lastStampResult = nil
+            task.resume()
+        } catch {
+            debugPrint("Error serializing data: \(error)")
         }
+        
+        
+    }
+    
+    
+    private func performSignInWithApple() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.email]
+        
+        guard let coordinator = self.coordinator else {
+            return
+        }
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = coordinator
+        authorizationController.presentationContextProvider = coordinator
+        authorizationController.performRequests()
+    }
+    
+    class Coordinator: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+        var parent: ContentView
+        
+        init(parenet: ContentView){
+            self.parent = parenet
+        }
+        
+        func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+            debugPrint("SignIn with Apple : presentationAnchor() called")
+            let scenes = UIApplication.shared.connectedScenes
+            let windowScene = scenes.first as? UIWindowScene
+            let window = windowScene?.windows.first
+            return window!
+        }
+        
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+            debugPrint("SignIn with Apple : didCompleteWithAuthorization() called")
+            if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                parent.userIdentifier = credential.user
+                parent.email = credential.email
+                parent.identityToken = credential.identityToken
+                
+                debugPrint("SignIn with Apple : userIdentifier = \(parent.userIdentifier ?? "nil")")
+                debugPrint("SignIn with Apple : email = \(parent.email ?? "nil")")
+                debugPrint("SignIn with Apple : identityToken = \(String(data: parent.identityToken!, encoding: .utf8) ?? "nil")")
+                
+                debugPrint("now ready to send to server")
+                parent.performStamp()
+            }
+        }
+        
+        func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+            debugPrint("SignIn with Apple : didCompleteWithError() called with error : \(error.localizedDescription)")
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(parenet: self)
     }
 }
 

@@ -24,11 +24,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        debugPrint("didUpdateLocations with \(locations.count) locations")
+//        debugPrint("didUpdateLocations with \(locations.count) locations")
         guard let location = locations.last else { return }
         latitude = location.coordinate.latitude
         longtitude = location.coordinate.longitude
-        debugPrint("New location : \(location.coordinate.latitude), \(location.coordinate.longitude)")
+//        debugPrint("New location : \(location.coordinate.latitude), \(location.coordinate.longitude)")
         
         let geocoder = CLGeocoder()
         
@@ -43,8 +43,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 return
             }
             
-            debugPrint("New placemark name = \(String(describing: placemark.name))")
-            debugPrint("New placement full = \(String(describing: placemarks))")
+//            debugPrint("New placemark name = \(String(describing: placemark.name))")
+//            debugPrint("New placement full = \(String(describing: placemarks))")
             self.placeName = placemark.name
         }
         
