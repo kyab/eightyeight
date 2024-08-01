@@ -1,8 +1,12 @@
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
 from jose import jwt
 import requests
 import time
+from datetime import datetime
+from typing import List, Dict, Any
+import pytz
 
 app = FastAPI()
 
@@ -28,6 +32,8 @@ class ApplePublicKeyCache:
         return self.keys
     
 key_cache = ApplePublicKeyCache()
+
+stamp_history: List[Dict[str, Any]] = []
 
 
 #Static file (Apple AASA)
@@ -99,8 +105,58 @@ async def api_stamp(request: Request):
         print("exp = ", verified_token['exp'])
         print("dump = ", verified_token)
 
+        stamp_history.append({"userIdentifier" : user_identifier,
+                                "email" : email,
+                                "latitude" : latitude, 
+                                "longtitude" : longtitude,
+                                "placeName" : place_name,
+                                "timestamp" : datetime.now().isoformat()
+                            })
+
         return {"status" : "stamped", "userIdentifier" : user_identifier, "email" : email, "latitude" : latitude, "longtitude" : longtitude, "placeName" : place_name}
         
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
     
+
+def convert_to_jst(utc_timestamp: str) -> str:
+    utc_time = datetime.fromisoformat(utc_timestamp.replace("Z", "+00:00"))
+    jst_time = utc_time.astimezone(pytz.timezone('Asia/Tokyo'))
+    return jst_time.strftime('%Y-%m-%d %H:%M:%S %Z')
+
+@app.get("/stamp_history", response_class=HTMLResponse)
+async def get_stamp_history():
+    html_content = """
+    <html>
+        <head>
+            <title>88 Stamps</title>
+        </head>
+        <body>
+            <h1>88 Stamps</h1>
+            <table border="1">
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Apple ID</th>
+                    <th>Latitude</th>
+                    <th>Longtitude</th>
+                    <th>Place Name</th>
+                    <th>Google Map</th>
+                </tr>
+    """
+    for record in stamp_history:
+        html_content += f"""
+                <tr>
+                    <td>{convert_to_jst(record['timestamp'])}</td>
+                    <td>{record['email']}</td>
+                    <td>{record['latitude']}</td>
+                    <td>{record['longtitude']}</td>
+                    <td>{record['placeName']}</td>
+                    <td><a href='https://www.google.com/maps/search/?api=1&query={record['latitude']},{record['longtitude']}' target='_blank'>Google Map</a></td>
+                </tr>
+        """
+    html_content += """
+            </table>
+        </body>
+    </html>
+    """
+    return HTMLResponse(content=html_content)
