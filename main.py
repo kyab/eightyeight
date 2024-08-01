@@ -2,11 +2,33 @@ from fastapi import FastAPI, Request, HTTPException
 from fastapi.staticfiles import StaticFiles
 from jose import jwt
 import requests
+import time
 
 app = FastAPI()
 
+
+# Apple Sign In
 APPLE_SIGN_IN_PUBLIC_KEYS_URL = "https://appleid.apple.com/auth/keys"
 APPLE_SIGN_IN_AUDIENCE = "com.kyab.eightyeight.AppClip"
+
+class ApplePublicKeyCache:
+    def __init__(self, cache_duration: int = 3600):
+        self.cache_duration = cache_duration
+        self.keys = None
+        self.last_update = 0
+
+    def get_keys(self):
+        current_time = time.time()
+        if self.keys is None or current_time - self.last_update > self.cache_duration:
+            response = requests.get(APPLE_SIGN_IN_PUBLIC_KEYS_URL)
+            if response.status_code != 200:
+                raise HTTPException(status_code=500, detail="Failed to fetch Apple public keys")
+            self.keys = response.json()
+            self.last_update = current_time
+        return self.keys
+    
+key_cache = ApplePublicKeyCache()
+
 
 #Static file (Apple AASA)
 app.mount("/.well-known", StaticFiles(directory=".well-known"), name="well-known")
@@ -25,20 +47,13 @@ async def location(lon: float):
 async def appclip():
     return {"message" : "Hello AppClip"}
 
-def get_apple_public_keys():
-    response = requests.get(APPLE_SIGN_IN_PUBLIC_KEYS_URL)
-    if response.status_code != 200:
-        raise HTTPException(status_code=500, detail="Failed to fetch Apple public keys")
-    
-    return response.json()
-
 def verify_apple_token(identity_token : str):
 
     print("verify_apple_token()")
 
     header = jwt.get_unverified_header(identity_token)
     kid = header['kid']
-    apple_public_keys = get_apple_public_keys()
+    apple_public_keys = key_cache.get_keys()
 
     key = None
     for apple_key in apple_public_keys['keys']:
